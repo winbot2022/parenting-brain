@@ -192,9 +192,10 @@ def main():
                 st.write(FEEDBACK[cat_key][level])
                 st.markdown(f"[この記事を読み直す](https://note.com/)")
 
+        # 修正後：196行目付近
         st.divider()
-        [cite_start]st.subheader("2月17日（火） 21:00 公開予定 [cite: 18, 20]")
-        st.write("この診断結果を胸に、月曜日を笑顔で迎えましょう。")
+        st.subheader("2月17日（火） 21:00 公開予定")
+        st.write("この診断結果を胸に、月曜日を笑顔で迎える準備をしましょう。")
         st.caption(CONFIG["footer"])
 
 if __name__ == "__main__":
