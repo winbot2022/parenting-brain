@@ -203,14 +203,25 @@ def main():
         
         # スコアの低い順に並べ替え
         sorted_scores = sorted(scores.items(), key=lambda x: x[1])
-        
+
+        # 各カテゴリに対応するnote記事のURL（実際のURLに書き換えてください）
+        NOTE_URLS = {
+            "S": "https://note.com/like_sorrel1679/n/n5d8b498a175e",
+            "C": "https://note.com/like_sorrel1679",
+            "A": "https://note.com/like_sorrel1679/n/nd8b533de3f6b",
+            "R": "https://note.com/like_sorrel1679/n/n0bc65fed1d89",
+            "F": "https://note.com/like_sorrel1679/n/n9ade3742e407"
+        }
         for cat_key, score in sorted_scores:
             level = get_level(score)
-            # 最も低いスコアの項目だけ最初から開いておく
             is_expanded = (cat_key == sorted_scores[0][0])
+            
             with st.expander(f"{CATEGORIES[cat_key]} ： {score}点", expanded=is_expanded):
                 st.write(FEEDBACK[cat_key][level])
-                st.markdown(f"[この記事を読み直す](https://note.com/)")
+                
+                # ここでカテゴリに応じたURLを動的に取得します
+                target_url = NOTE_URLS.get(cat_key, "https://note.com/")
+                st.markdown(f"🔗 [この要素（{cat_key}）の解説記事を読み直す]({target_url})")
 
         # 修正後：196行目付近
         st.divider()
