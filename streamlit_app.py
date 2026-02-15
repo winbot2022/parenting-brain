@@ -207,7 +207,7 @@ def main():
         # 各カテゴリに対応するnote記事のURL（実際のURLに書き換えてください）
         NOTE_URLS = {
             "S": "https://note.com/like_sorrel1679/n/n5d8b498a175e",
-            "C": "https://note.com/like_sorrel1679",
+            "C": "https://note.com/like_sorrel1679/n/n31e293d19d5a",
             "A": "https://note.com/like_sorrel1679/n/nd8b533de3f6b",
             "R": "https://note.com/like_sorrel1679/n/n0bc65fed1d89",
             "F": "https://note.com/like_sorrel1679/n/n9ade3742e407"
